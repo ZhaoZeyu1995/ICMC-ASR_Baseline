@@ -17,12 +17,12 @@ data_prep_stop_stage=2
 ################################################
 # The icmc-asr dataset location, please change this to your own path!!!
 # make sure of using absolute path. DO-NOT-USE relatvie path!
-data=/home/work_nfs4_ssd/hwang/data/ICMC-ASR
+data=/disk/data3/zzhao/data/ICMC-ASR
 # data dir for IVA + AEC enhanced audio
-data_enhanced=/home/work_nfs4_ssd/hwang/data/ICMC-ASR_ENHANCED
+data_enhanced=/disk/data3/zzhao/data/ICMC-ASR
 ################################################
 
-nj=64
+nj=32
 dict=data/dict/lang_char.txt
 
 # data_type can be `raw` or `shard`. Typically, raw is used for small dataset,
@@ -38,7 +38,7 @@ train_config=conf/train_ebranchformer.yaml
 cmvn=true
 dir=exp/baseline_ebranchformer
 checkpoint=
-num_workers=8
+num_workers=4
 prefetch=500
 find_unused_parameters=false
 
